@@ -2,10 +2,10 @@
 // get method
 $id = isset($_GET['id']) ? abs(intval($_GET['id'])) : false;
 $do = isset($_GET['do']) ? trim(htmlspecialchars($_GET['do'])) : false;
-$homeurl = 'http://localhost/loanOnline';
+$homeurl = 'https://capphebank.herokuapp.com/';
 // create url
 function homeurl($url = ''){
-    return 'http://localhost/loanOnline/'.$url;
+    return 'https://capphebank.herokuapp.com/'.$url;
 }
 // redirect
 function redirect($url){
