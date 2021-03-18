@@ -1,0 +1,39 @@
+Options +FollowSymlinks
+Options All -Indexes
+RewriteEngine on
+ErrorDocument 404 /loanOnline/404.php
+ErrorDocument 403 /loanOnline/404.php
+RewriteRule ^news.html$ list-news.php [L]
+RewriteRule ^dang-ky.html$ register.php [L]
+RewriteRule ^dang-nhap.html$ login.php [L]
+RewriteRule ^dang-xuat.html$ logout.php [L]
+RewriteRule ^huong-dan-su-dung$ huongdan.php [L]
+RewriteRule ^cau-hoi-thuong-gap$ question.php [L]
+RewriteRule ^dieu-khoan$ dieukhoan.php [L]
+RewriteRule ^publisher/change-password$ publisher/changep.php [L]
+RewriteRule ^publisher/overview$ publisher/index.php [L]
+RewriteRule ^publisher/doanh-thu$ publisher/doanhthu.php [L]
+RewriteRule ^publisher/profile$ publisher/profile.php [L]
+RewriteRule ^publisher/lich-su$ publisher/lichsu.php [L]
+RewriteRule ^publisher/bao-cao$ publisher/report.php [L]
+RewriteRule ^publisher/thong-tin-thanh-toan$ publisher/bank.php [L]
+RewriteRule ^chinh-sach$ chinhsach.php [L]
+RewriteRule ^dieu-khoan$ dieukhoan.php [L]
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^publisher/tool/money$ publisher/tool.php?do=money [L]
+RewriteRule ^publisher/notification$ publisher/noti.php [L]
+RewriteRule ^publisher/tool/cong-tac-vien$ publisher/tool.php?do=congtacvien [L]
+RewriteRule ^news/([a-zA-Z0-9_-]+)/([0-9]+)$ news.php?id=$2 [L]
+RewriteRule ^vay-tien$ ref/index.php [L]
+RewriteRule ^ref/([0-9]+)$ ref/index.php?id=$1 [L]
+RewriteRule ^ref/thanh-cong.html$ ref/success.php [L]
+RewriteRule ^register/([0-9]+)$ register.php?id=$1 [L]
+RewriteRule ^register$ register.php [L]
+
+<Files .htaccess>
+
+Order Allow,Deny
+
+Deny from all
+
+</Files>
