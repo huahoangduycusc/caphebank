@@ -5,9 +5,10 @@ $con = null;
 function db_connect(){
     global $con;
     if(!$con){
-        $con = mysqli_connect('localhost','root','','loanonline')
+        $con = mysqli_connect('sql4.freemysqlhosting.net','sql4399752','Juru7mh5CQ','sql4399752')
         or die('Cannot connect to database !');
-        mysqli_set_charset($con,"UTF-8");
+        mysqli_set_charset($con, 'UTF8');
+        
     }
 }
 // disconnect function
